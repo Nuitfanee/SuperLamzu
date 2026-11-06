@@ -1,0 +1,3 @@
+* -text whitespace=cr-at-eol
+*.exe binary
+flasher/THIRD_PARTY_LICENSES.txt -whitespace

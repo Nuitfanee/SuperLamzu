@@ -1,0 +1,36 @@
+"""Immutable native receiver instruction guards from isolated IDA evidence."""
+QUEUE_PREIMAGES = {
+    0x20002ebc: bytes.fromhex(
+        '2de9f8430646eff31188602383f31288bff36f8f4ff4207909fb00f7154ce35de51933b188f31188bff36f8f0020bde8'
+        'f883192095f802c007f10c0310fb0c30204400f053f9ab782a790133dbb29a4298bf0023ea78ab709a4204bf0123e355'
+        '002309fb0644637088f31188bff36f8f0120dce7'
+    ),
+    0x20002f34: bytes.fromhex(
+        '2de9f8430746eff31188602383f31288bff36f8f4ff4207909fb00f5174c635d661933b188f31188bff36f8f0020bde8'
+        'f883192096f802e000fb0e5323441a7305f10d0310fb0e30204400f013f9b37832790133dbb29a4298bf0023f278b370'
+        '9a4204bf01236355002309fb0744637088f31188bff36f8f0120d8e7'
+    ),
+    0x200030e8: bytes.fromhex(
+        '2de9f84380464ff4207909fb08f6164c084611461a46a35da71913bb90f800c01920bd7800fb056300fb05600d302344'
+        '204483f80cc000f043f8bb783a790133dbb29a4298bf0023fa78bb709a4204bf0123a3550023012009fb08446370bde8'
+        'f8830020fbe7'
+    ),
+    0x20002f30: bytes.fromhex("386e0020"),
+    0x20002fb0: bytes.fromhex("386e0020"),
+    0x20003150: bytes.fromhex("386e0020"),
+}
+
+# REPORT's first queue call retains parser r7 and caller r5/r6. The native
+# queue writer returns 1 only after publishing its complete copied record.
+ABS_ADMISSION_PREIMAGES = {
+    0x20001128: bytes.fromhex(
+        '70b5014688b0274879f000ff20b108b0bde8704079f06ebf08220120224b9847'
+    ),
+    0x2007af34: bytes.fromhex('d0e8af0f7047'),
+    0x200019e6: bytes.fromhex('9df811309df81040c3f3c007'),
+    0x20001588: bytes.fromhex(
+        '2de9f04715468a46c1b3bab340f2752303fb00f41a4e04eb060898f8022098f80110305d01f0ecfd40bb98f80330'
+        'ab4222d9eff31189602383f31288bff36f8f1927305da31d17fb00302a465146304401f0e6fd335d98f8022007fb'
+        '03470133b3fbf2f102fb113337443d71335589f31188bff36f8f0120bde8f0870020fbe7'
+    ),
+}

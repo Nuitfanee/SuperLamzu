@@ -1,0 +1,4 @@
+hidapi==0.15.0
+capstone==5.0.7
+unicorn==2.1.4
+keystone-engine==0.9.2
