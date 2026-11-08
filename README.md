@@ -2,7 +2,7 @@
 
 English | [简体中文](README.zh-CN.md)
 
-Website: [superlamzu.wtf](https://superlamzu.wtf)
+Mouse web driver URL/鼠标网页驱动地址: [superlamzu.wtf](https://superlamzu.wtf)
 
 A LAMZU firmware port and derivative of [hyperdrako](https://gitlab.jaceee.dev/open/hyperdrako), providing a **SUPER firmware patch builder and command-line configuration tools**. For learning and research only.
 
